@@ -22,12 +22,15 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
+				filetypes = { "templ", "astro", "javascript", "typescript", "react", "typescriptreact", "html" },
+				init_options = { userLanguages = { templ = "html" } },
 			})
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.html.setup({
 				capabilities = capabilities,
+				filetypes = { "html", "templ" },
 			})
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
@@ -37,20 +40,21 @@ return {
 			})
 			lspconfig.htmx.setup({
 				capabilities = capabilities,
+				filetypes = { "html", "templ" },
 			})
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.emmet_language_server.setup({
 				capabilities = capabilities,
+				filetypes = { "html", "templ" },
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.code_action, {})
-			vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, {})
+			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
 		end,
 	},
 }
