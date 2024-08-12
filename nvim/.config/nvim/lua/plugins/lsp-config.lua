@@ -20,10 +20,17 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local lspconfig = require("lspconfig")
+
 			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
-				filetypes = { "templ", "astro", "javascript", "typescript", "react", "typescriptreact", "html" },
-				init_options = { userLanguages = { templ = "html" } },
+				filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+				settings = {
+					tailwindCSS = {
+						includeLanguages = {
+							templ = "html",
+						},
+					},
+				},
 			})
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
@@ -44,10 +51,6 @@ return {
 			})
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
-			})
-			lspconfig.emmet_language_server.setup({
-				capabilities = capabilities,
-				filetypes = { "html", "templ" },
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
