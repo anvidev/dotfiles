@@ -25,6 +25,6 @@ vim.keymap.set("n", "U", "<C-r>")
 -- Press gx to open the link under the cursor
 vim.keymap.set("n", "gx", ":sil !open <cWORD><cr>", { silent = true })
 
--- Paste without losing the contents of the register
+-- Move selected lines up or down
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
