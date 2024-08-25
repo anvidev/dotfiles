@@ -1,6 +1,5 @@
 import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
-  # "~/.config/alacritty/tokyonight_moon.toml"
+  "~/.config/alacritty/tokyonight_moon.toml"
 ]
 
 [env]
@@ -25,3 +24,5 @@ style = "Italic"
 family = "JetBrainsMono Nerd Font Mono"
 style = "Regular"
 
+[window]
+dynamic_padding = true
