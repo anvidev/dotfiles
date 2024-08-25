@@ -64,7 +64,7 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 8
 
 -- Place a column line
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"
 
 -- Adding templ files to Vim
 vim.filetype.add({ extension = { templ = "templ" } })
