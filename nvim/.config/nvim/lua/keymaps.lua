@@ -26,8 +26,8 @@ vim.keymap.set("n", "U", "<C-r>")
 vim.keymap.set("n", "gx", ":sil !open <cWORD><cr>", { silent = true })
 
 -- Move selected lines up or down
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", {})
+vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", {})
 
 -- Open floating terminal
-vim.keymap.set("n", "<leader>tt", ":NeotermToggle<CR>", {})
+vim.keymap.set("n", "<leader>tt", ":NeotermToggle<CR>", { silent = true })
