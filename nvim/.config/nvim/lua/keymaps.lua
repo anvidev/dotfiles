@@ -55,3 +55,15 @@ vim.keymap.set("n", "<leader>ss", function()
     previewer = false,
   }))
 end, { desc = "[S]earch [S]pelling suggestions" })
+
+-- Reselect the last visual selection
+vim.keymap.set("x", "<<", function()
+  -- Move selected text up/down in visual mode
+  vim.cmd("normal! <<")
+  vim.cmd("normal! gv")
+end)
+
+vim.keymap.set("x", ">>", function()
+  vim.cmd("normal! >>")
+  vim.cmd("normal! gv")
+end)
