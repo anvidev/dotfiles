@@ -67,3 +67,5 @@ vim.keymap.set("x", ">>", function()
   vim.cmd("normal! >>")
   vim.cmd("normal! gv")
 end)
+
+vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<cr>")
