@@ -40,6 +40,7 @@ return {
       vim.keymap.set("n", "<leader>fd", builtin.diagnostics, {})
       vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>")
       vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find, {})
+      vim.keymap.set("n", "<leader>fc", builtin.commands, {})
 
       require("telescope").load_extension("ui-select")
     end,
