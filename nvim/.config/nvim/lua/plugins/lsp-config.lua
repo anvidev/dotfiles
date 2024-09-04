@@ -69,6 +69,7 @@ return {
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
       vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
       vim.keymap.set("i", "<C-space>", vim.lsp.buf.completion, {})
+      vim.keymap.set("n", "<C-y>", vim.diagnostic.open_float, {})
     end,
   },
 }
