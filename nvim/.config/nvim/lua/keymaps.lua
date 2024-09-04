@@ -10,9 +10,9 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
 vim.keymap.set("n", "S", function()
-	local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
-	local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
-	vim.api.nvim_feedkeys(keys, "n", false)
+  local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
+  local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
+  vim.api.nvim_feedkeys(keys, "n", false)
 end)
 
 -- Press 'H', 'L' to jump to start/end of a line (first/last char)
@@ -31,3 +31,8 @@ vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", {})
 
 -- Open floating terminal
 vim.keymap.set("n", "<leader>tt", ":NeotermToggle<CR>", { silent = true })
+
+-- Open spectre
+vim.keymap.set("n", "<leader>S", function()
+  require("spectre").toggle()
+end)
