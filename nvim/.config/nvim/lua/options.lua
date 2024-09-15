@@ -61,7 +61,7 @@ vim.opt.clipboard = "unnamed,unnamedplus"
 vim.opt.cursorline = true
 
 -- Always keep 8 lines above/below cursor unless at start/end of file
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 20
 
 -- Place a column line
 vim.opt.colorcolumn = "120"

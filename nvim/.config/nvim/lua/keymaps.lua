@@ -11,6 +11,9 @@ vim.keymap.set("n", "#", "#zz")
 vim.keymap.set("n", "*", "*zz")
 vim.keymap.set("n", "gd", "gdzz")
 
+-- save file without auto-formatting
+vim.keymap.set("n", "<leader>sn", "<cmd>noautocmd w <CR>", { silent = true })
+
 -- Remove highlight
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
@@ -42,6 +45,9 @@ vim.keymap.set("n", "<leader>tt", ":NeotermToggle<CR>", { silent = true })
 vim.keymap.set("n", "<leader>S", function()
   require("spectre").toggle()
 end)
+
+-- Toggle line wrapping
+vim.keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", { silent = true })
 
 -- Open hover for diagnostics
 vim.keymap.set("n", "<leader>d", function()
