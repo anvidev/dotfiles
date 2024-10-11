@@ -17,7 +17,9 @@ return {
 				enabled = true,
 				open = "botright split | resize 15",
 			},
-			quickfix = false,
+			quickfix = {
+				open = false,
+			},
 		})
 	end,
 
