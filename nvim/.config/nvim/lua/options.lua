@@ -2,6 +2,9 @@
 vim.opt.nu = true
 vim.opt.rnu = true
 
+-- Enable if you have a Nerd Font installed
+vim.g.have_nerd_font = true
+
 -- Disable showing the mode below the statusline
 vim.opt.showmode = false
 
@@ -55,16 +58,20 @@ vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 
 -- Enable access to System Clipboard
-vim.opt.clipboard = "unnamed,unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 -- Enable cursor line highlight
 vim.opt.cursorline = true
 
 -- Always keep 8 lines above/below cursor unless at start/end of file
-vim.opt.scrolloff = 20
+vim.opt.scrolloff = 8
 
 -- Place a column line
 vim.opt.colorcolumn = "120"
+
+-- Decrease mapped sequence wait time
+-- Displays which-key popup sooner
+vim.opt.timeoutlen = 300
 
 -- Adding templ files to Vim
 vim.filetype.add({ extension = { templ = "templ" } })
