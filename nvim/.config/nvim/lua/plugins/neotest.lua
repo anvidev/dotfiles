@@ -21,7 +21,12 @@ return {
 		})
 	end,
 
-	vim.keymap.set("n", "<leader>tr", "<cmd>lua require('neotest').run.run()<CR>", { desc = "[T]est [R]un" }),
+	vim.keymap.set(
+		"n",
+		"<leader>tc",
+		"<cmd>lua require('neotest').run.run()<CR>",
+		{ desc = "[T]est [R]un function under [C]ursor" }
+	),
 	vim.keymap.set(
 		"n",
 		"<leader>ts",
@@ -36,8 +41,8 @@ return {
 	),
 	vim.keymap.set(
 		"n",
-		"<leader>te",
+		"<leader>tf",
 		"<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>",
-		{ desc = "[T]est [R]un in file" }
+		{ desc = "[T]est run in [F]ile" }
 	),
 }
