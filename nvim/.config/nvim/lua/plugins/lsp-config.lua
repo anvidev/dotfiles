@@ -92,7 +92,9 @@ return {
 
 			local servers = {
 				gopls = {},
-				ts_ls = {},
+				ts_ls = {
+					filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+				},
 				templ = {},
 				dockerls = {},
 				yamlls = {},
@@ -142,6 +144,7 @@ return {
 			vim.list_extend(ensure_installed, {
 				"stylua",
 				"prettier",
+				"prettierd",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
